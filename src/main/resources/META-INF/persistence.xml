@@ -22,7 +22,7 @@
             <property name="wildfly.jpa.hibernate.search.module" value="org.hibernate.search.orm:${version.hibernate-search}"/>
 
             <property name="hibernate.search.default.directory_provider" value="infinispan"/>
-            <property name="hibernate.search.infinispan.cachemanager_jndiname" value="java:jboss/infinispan/hibernate-search"/>
+            <!--<property name="hibernate.search.infinispan.cachemanager_jndiname" value="java:jboss/infinispan/hibernate-search"/>-->
         </properties>
     </persistence-unit>
 </persistence>

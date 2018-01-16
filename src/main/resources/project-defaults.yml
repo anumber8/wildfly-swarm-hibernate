@@ -39,7 +39,7 @@ swarm:
           LuceneIndexesMetadata:
             mode: SYNC
             binary-jdbc-store:
-              datasource: java:jboss/datasources/ClarksnutDS
+              datas-ource: java:jboss/datasources/ClarksnutDS
               shared: true
               passivation: false
               purge: false
@@ -51,7 +51,7 @@ swarm:
           LuceneIndexesData:
             mode: SYNC
             binary-jdbc-store:
-              datasource: java:jboss/datasources/ClarksnutDS
+              data-source: java:jboss/datasources/ClarksnutDS
               shared: true
               passivation: false
               purge: false
