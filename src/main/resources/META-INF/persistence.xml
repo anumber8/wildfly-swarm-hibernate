@@ -5,7 +5,7 @@
              http://xmlns.jcp.org/xml/ns/persistence/persistence_2_1.xsd"
              version="2.1">
     <persistence-unit name="ExamplePU" transaction-type="JTA">
-        <jta-data-source>java:jboss/datasources/ExampleDS</jta-data-source>
+        <jta-data-source>java:jboss/datasources/ClarksnutDS</jta-data-source>
         <provider>org.hibernate.jpa.HibernatePersistenceProvider</provider>
         <exclude-unlisted-classes>false</exclude-unlisted-classes>
         <properties>
@@ -20,6 +20,9 @@
 
             <!--Hibernate Search-->
             <property name="wildfly.jpa.hibernate.search.module" value="org.hibernate.search.orm:${version.hibernate-search}"/>
+
+            <property name="hibernate.search.default.directory_provider" value="infinispan"/>
+            <property name="hibernate.search.infinispan.cachemanager_jndiname" value="java:jboss/infinispan/hibernate-search"/>
         </properties>
     </persistence-unit>
 </persistence>
