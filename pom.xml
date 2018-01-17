@@ -48,12 +48,6 @@
             <artifactId>infinispan</artifactId>
         </dependency>
 
-        <dependency>
-            <groupId>org.infinispan</groupId>
-            <artifactId>infinispan-directory-provider</artifactId>
-            <version>9.0.1.Final</version>
-        </dependency>
-
         <!-- Jdbc drivers -->
         <dependency>
             <groupId>com.h2database</groupId>
@@ -118,7 +112,7 @@
                                     <version>${version.hibernate}</version>
                                     <classifier>wildfly-11-dist</classifier>
                                     <type>zip</type>
-                                    <overWrite>false</overWrite>
+                                    <overWrite>true</overWrite>
                                     <outputDirectory>${project.build.outputDirectory}/modules</outputDirectory>
                                 </artifactItem>
                                 <artifactItem>
@@ -127,7 +121,15 @@
                                     <version>${version.hibernate-search}</version>
                                     <classifier>wildfly-11-dist</classifier>
                                     <type>zip</type>
-                                    <overWrite>false</overWrite>
+                                    <overWrite>true</overWrite>
+                                    <outputDirectory>${project.build.outputDirectory}/modules</outputDirectory>
+                                </artifactItem>
+                                <artifactItem>
+                                    <groupId>org.infinispan</groupId>
+                                    <artifactId>infinispan-wildfly-modules</artifactId>
+                                    <version>9.1.4.Final</version>
+                                    <type>zip</type>
+                                    <overWrite>true</overWrite>
                                     <outputDirectory>${project.build.outputDirectory}/modules</outputDirectory>
                                 </artifactItem>
                             </artifactItems>

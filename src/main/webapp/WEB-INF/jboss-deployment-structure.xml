@@ -4,5 +4,14 @@
         <exclusions>
             <module name="org.javassist"/>
         </exclusions>
+        <dependencies>
+            <module name="org.infinispan.hibernate-search.directory-provider" slot="for-hibernatesearch-5.8" export="true" services="import" />
+            <!--<module name="org.apache.lucene" export="true" services="import" /> <module
+                name="org.infinispan.lucene-directory" slot="ispn-8.1" /> -->
+
+            <!--<module name="org.infinispan.core" slot="ispn-8.1" services="import" export="true" />-->
+            <!--<module name="org.infinispan.persistence.jdbc" slot="ispn-8.1" services="import" export="true" />-->
+            <!--<module name="org.infinispan.persistence.remote" slot="ispn-8.1" services="import" export="true" />-->
+        </dependencies>
     </deployment>
 </jboss-deployment-structure>
