@@ -37,6 +37,7 @@ swarm:
       hibernate-search:
         default-cache: LuceneIndexesData
         jndi-name: "java:jboss/infinispan/hibernate-search"
+#        module: "org.infinispan.cachestore.jdbc"
         jgroups-transport:
           lock-timeout: 60000
         replicated-caches:
