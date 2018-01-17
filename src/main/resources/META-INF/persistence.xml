@@ -15,14 +15,21 @@
             <property name="hibernate.hbm2ddl.auto" value="create-drop"/>
             <property name="hibernate.show_sql" value="true"/>
             <property name="hibernate.format_sql" value="true"/>
+
+            <!--Second level cache-->
             <property name="hibernate.cache.use_query_cache" value="true"/>
             <property name="hibernate.cache.use_second_level_cache" value="true"/>
+            <property name="hibernate.cache.region.factory_class" value="org.hibernate.cache.infinispan.JndiInfinispanRegionFactory" />
+            <property name="hibernate.cache.infinispan.cachemanager" value="java:jboss/infinispan/hibernate-orm" />
 
             <!--Hibernate Search-->
             <property name="wildfly.jpa.hibernate.search.module" value="org.hibernate.search.orm:${version.hibernate-search}"/>
 
+            <!--Directory provider-->
             <property name="hibernate.search.default.directory_provider" value="infinispan"/>
             <!--<property name="hibernate.search.infinispan.cachemanager_jndiname" value="java:jboss/infinispan/hibernate-search"/>-->
+            <!--<property name="hibernate.search.infinispan.configuration_resourcename" value="hibernate-search-infinispan.xml"/>-->
+            <!--<property name="hibernate.search.infinispan.configuration.transport_override_resourcename = jgroups-ec2.xml" value="jgroups.xml"/>-->
         </properties>
     </persistence-unit>
 </persistence>

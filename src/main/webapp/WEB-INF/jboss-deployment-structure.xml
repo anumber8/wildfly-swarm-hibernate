@@ -5,13 +5,22 @@
             <module name="org.javassist"/>
         </exclusions>
         <dependencies>
+            <!-- Core Java/Java EE Dependencies -->
+            <!--<module name="javax.transaction.api" export="true" services="import" />-->
+
+            <!-- JPA/Hibernate Search Dependencies -->
+            <!--<module name="javax.persistence.api" export="true" />-->
+
+            <module name="org.hibernate.search.engine" export="true" services="import" slot="5.8" />
+            <module name="org.hibernate.search.orm" export="true" services="import" slot="5.8" />
+
             <module name="org.infinispan.hibernate-search.directory-provider" slot="for-hibernatesearch-5.8" export="true" services="import" />
             <!--<module name="org.apache.lucene" export="true" services="import" /> <module
                 name="org.infinispan.lucene-directory" slot="ispn-8.1" /> -->
 
-            <!--<module name="org.infinispan.core" slot="ispn-8.1" services="import" export="true" />-->
-            <!--<module name="org.infinispan.persistence.jdbc" slot="ispn-8.1" services="import" export="true" />-->
-            <!--<module name="org.infinispan.persistence.remote" slot="ispn-8.1" services="import" export="true" />-->
+            <module name="org.infinispan.core" slot="ispn-9.1" services="import" export="true" />
+            <module name="org.infinispan.persistence.jdbc" slot="ispn-9.1" services="import" export="true" />
+            <module name="org.infinispan.persistence.remote" slot="ispn-9.1" services="import" export="true" />
         </dependencies>
     </deployment>
 </jboss-deployment-structure>
