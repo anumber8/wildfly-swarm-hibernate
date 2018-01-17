@@ -34,38 +34,38 @@ swarm:
             expiration-component:
               max-idle: 100000
           timestamps:
-#      hibernate-search:
-#        default-cache: LuceneIndexesData
-#        jndi-name: "java:jboss/infinispan/hibernate-search"
-#        jgroups-transport:
-#          lock-timeout: 60000
-#        replicated-caches:
-#          LuceneIndexesMetadata:
-#            mode: SYNC
-#            statistics-enabled: true
-#            binary-jdbc-store:
-#              data-source: java:jboss/datasources/ClarksnutDS
-#              shared: true
-#              passivation: false
-#              purge: false
-#              properties:
-#                createTableOnStart: true
-#              binary-keyed-table:
-#                id-column: ID_COLUMN
-#                data-column: DATUM
-#          LuceneIndexesData:
-#            mode: SYNC
-#            statistics-enabled: true
-#            binary-jdbc-store:
-#              data-source: java:jboss/datasources/ClarksnutDS
-#              shared: true
-#              passivation: false
-#              purge: false
-#              properties:
-#                createTableOnStart: true
-#              binary-keyed-table:
-#                id-column: ID_COLUMN
-#                data-column: DATUM
-#          LuceneIndexesLocking:
-#            mode: SYNC
-#            statistics-enabled: true
+      hibernate-search:
+        default-cache: LuceneIndexesData
+        jndi-name: "java:jboss/infinispan/hibernate-search"
+        jgroups-transport:
+          lock-timeout: 60000
+        replicated-caches:
+          LuceneIndexesMetadata:
+            mode: SYNC
+            statistics-enabled: true
+            binary-jdbc-store:
+              data-source: InfinispanDS
+              shared: true
+              passivation: false
+              purge: false
+              properties:
+                createTableOnStart: true
+              binary-keyed-table:
+                id-column: ID_COLUMN
+                data-column: DATUM
+          LuceneIndexesData:
+            mode: SYNC
+            statistics-enabled: true
+            binary-jdbc-store:
+              data-source: InfinispanDS
+              shared: true
+              passivation: false
+              purge: false
+              properties:
+                createTableOnStart: true
+              binary-keyed-table:
+                id-column: ID_COLUMN
+                data-column: DATUM
+          LuceneIndexesLocking:
+            mode: SYNC
+            statistics-enabled: true
